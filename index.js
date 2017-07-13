@@ -5,8 +5,9 @@ var express = require("express");
 var ParseServer = require("parse-server").ParseServer;
 var path = require("path");
 var S3Adapter = require("parse-server").S3Adapter;
+var cors = require('cors');
 
-var databaseUri = process.env.DATABASE_URI || process.env.MONGOLAB_URI;
+var databaseUri = process.env.DATABASE_URI || process.env.MONGODB_URI;
 
 if (!databaseUri) {
 	console.log("DATABASE_URI not specified, falling back to localhost.");
@@ -40,6 +41,7 @@ var api = new ParseServer({
 // javascriptKey, restAPIKey, dotNetKey, clientKey
 
 var app = express();
+app.use(cors()); 
 
 // Serve static assets from the /public folder
 app.use("/public", express.static(path.join(__dirname, "/public")));
