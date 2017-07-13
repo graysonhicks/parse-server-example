@@ -12,7 +12,8 @@
     "express": "=4.11.1",
     "kerberos": "=0.0.5",
     "parse": "=1.8.0",
-    "parse-server": "=2.2.0"
+    "parse-server": "=2.2.0",   
+    "cors": "*"            
   },
   "scripts": {
     "start": "node index.js"
