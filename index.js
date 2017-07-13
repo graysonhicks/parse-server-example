@@ -8,6 +8,8 @@ var S3Adapter = require("parse-server").S3Adapter;
 
 var databaseUri = process.env.DATABASE_URI || process.env.MONGOLAB_URI;
 
+console.log(databaseUri);
+
 if (!databaseUri) {
 	console.log("DATABASE_URI not specified, falling back to localhost.");
 }
