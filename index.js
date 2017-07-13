@@ -19,6 +19,7 @@ var api = new ParseServer({
 	masterKey: process.env.MASTER_KEY || "", //Add your master key here. Keep it secret!
 	serverURL: process.env.SERVER_URL || "http://localhost:1337/parse", // Don't forget to change to https if needed
 	restAPIKey: process.env.REST_API_KEY || "",
+	clientKey: process.env.CLIENT_KEY || '',
 	emailAdapter: {
 		module: "parse-server-simple-mailgun-adapter",
 		options: {
