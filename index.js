@@ -30,7 +30,7 @@ var api = new ParseServer({
 // 			// Your domain from mailgun.com
 // 			domain: "mg.parkary.com",
 // 			// Your API key from mailgun.com
-// 			apiKey: "key-70070639455f0b8bbbdc0a6386d449ee"
+// 			apiKey: process.env.MAILGUN_API_KEY || ""
 // 		}
 // 	},
 	filesAdapter: new S3Adapter(process.env.S3_ACCESS_KEY, process.env.S3_SECRET_KEY, process.env.S3_BUCKET, { directAccess: true }),
