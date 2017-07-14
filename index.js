@@ -22,17 +22,17 @@ var api = new ParseServer({
  	restAPIKey: process.env.REST_API_KEY || '',
   	dotNetKey: process.env.DOT_NET_KEY || '', 
   	clientKey: process.env.CLIENT_KEY || '', 
-	emailAdapter: {
-		module: "parse-server-simple-mailgun-adapter",
-		options: {
-			// The address that your emails come from
-			fromAddress: "parkaryapp@gmail.com",
-			// Your domain from mailgun.com
-			domain: "mg.parkary.com",
-			// Your API key from mailgun.com
-			apiKey: "key-70070639455f0b8bbbdc0a6386d449ee"
-		}
-	},
+// 	emailAdapter: {
+// 		module: "parse-server-simple-mailgun-adapter",
+// 		options: {
+// 			// The address that your emails come from
+// 			fromAddress: "parkaryapp@gmail.com",
+// 			// Your domain from mailgun.com
+// 			domain: "mg.parkary.com",
+// 			// Your API key from mailgun.com
+// 			apiKey: "key-70070639455f0b8bbbdc0a6386d449ee"
+// 		}
+// 	},
 	filesAdapter: new S3Adapter(process.env.S3_ACCESS_KEY, process.env.S3_SECRET_KEY, process.env.S3_BUCKET, { directAccess: true }),
 	liveQuery: {
 		classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
